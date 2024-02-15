@@ -150,7 +150,12 @@
     <!-- do not update necessary for lesson -->
     <zxcvbn.version>1.8.0</zxcvbn.version>
   </properties>
-
+<properties>
+    <sonar.java.binaries>target/classes</sonar.java.binaries>
+</properties>
+    <properties>
+    <sonar.exclusions>**/*.java</sonar.exclusions>
+</properties>
   <dependencyManagement>
     <dependencies>
 
