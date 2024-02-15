@@ -40,6 +40,7 @@ stage ('Sorce Code Analysis') {
    stage ('Build') {
       steps {
       sh 'mvn clean package'
+          sh 'mvn -e clean install'
     }
    }
   stage ('Deplpoy to Tomcat') {
