@@ -878,13 +878,6 @@
           </plugin>
         </plugins>
       </build>
-         <id>java-17</id>
-        <activation>
-            <activeByDefault>true</activeByDefault>
-        </activation>
-        <properties>
-            <maven.compiler.release>17</maven.compiler.release>
-        </properties>
     </profile>
   </profiles>
 </project>
