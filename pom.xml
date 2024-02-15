@@ -151,6 +151,7 @@
     <zxcvbn.version>1.8.0</zxcvbn.version>
       <sonar.java.binaries>target/classes</sonar.java.binaries>
        <sonar.exclusions>**/*.java</sonar.exclusions>
+       <maven.compiler.release>17</maven.compiler.release>
   </properties>
     
   <dependencyManagement>
@@ -493,6 +494,7 @@
         </executions>
       </plugin>
       <plugin>
+          
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
         <executions>
@@ -667,6 +669,16 @@
           <target>17</target>
         </configuration>
       </plugin>
+    </plugins>
+       <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.11.0</version>
+            <configuration>
+                <release>17</release>
+            </configuration>
+        </plugin>
     </plugins>
   </build>
 
@@ -874,6 +886,13 @@
           </plugin>
         </plugins>
       </build>
+         <id>java-17</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <properties>
+            <maven.compiler.release>17</maven.compiler.release>
+        </properties>
     </profile>
   </profiles>
 </project>
